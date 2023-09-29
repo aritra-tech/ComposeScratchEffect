@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeScratchEffect"
 include(":app")
+include(":scratcheffect")
