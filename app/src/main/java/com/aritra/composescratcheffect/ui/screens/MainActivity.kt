@@ -1,4 +1,4 @@
-package com.aritra.composescratcheffect
+package com.aritra.composescratcheffect.ui.screens
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,30 +17,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeScratchEffectTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                ScratchCard()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposeScratchEffectTheme {
-        Greeting("Android")
     }
 }
