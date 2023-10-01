@@ -16,6 +16,18 @@ import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.unit.IntSize
 
+/**
+ * Composable that allows users to scratch off a portion of an overlay image using touch input.
+ *
+ * @param overlayImage The ImageBitmap to be used as the base image.
+ * @param modifier Modifier for positioning and sizing of the ScratchEffect.
+ * @param movedOffset The current Offset where the user is scratching (nullable).
+ * @param onMovedOffset Callback function to update the movedOffset.
+ * @param currentPath The Path representing the scratched area.
+ * @param currentPathThickness The thickness of the scratch path.
+ * @param background A composable function for rendering the background behind the scratch area.
+ */
+
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun ScratchEffect(

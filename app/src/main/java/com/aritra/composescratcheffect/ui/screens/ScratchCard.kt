@@ -20,20 +20,27 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.aritra.composescratcheffect.R
+import com.aritra.composescratcheffect.model.ScratchPath
 import com.aritra.scratcheffect.ScratchEffect
 
 @Composable
 fun ScratchCard() {
 
+    // Load the outer and result images
+
     val outerImage = ImageBitmap.imageResource(id = R.drawable.outerimage)
     val resultImage = ImageBitmap.imageResource(id = R.drawable.resultimage)
 
+    // State to track the current scratch path and moved offset
+
     val pathState = remember {
-        mutableStateOf(com.aritra.composescratcheffect.model.Path(path = Path()))
+        mutableStateOf(ScratchPath(path = Path()))
     }
     val movedState = remember {
         mutableStateOf<Offset?>(null)
     }
+
+    // Composable to create the scratch card effect
 
     Box(
         contentAlignment = Alignment.Center,
@@ -50,6 +57,9 @@ fun ScratchCard() {
             },
             currentPath = pathState.value.path,
             currentPathThickness = pathState.value.width,
+
+            // Display the result image underneath the scratched area
+
             background = {
                 Image(bitmap = resultImage, contentDescription = "", modifier = Modifier.size(200.dp))
             }
