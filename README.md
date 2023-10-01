@@ -15,6 +15,10 @@
 
 <br>
 
+<p align="center">
+<img src="assets/scratchcardeffect.gif" width="280"/>
+</p>
+
 ## Adding the library to your project✨
 [![](https://jitpack.io/v/aritra-tech/ComposeScratchEffect.svg)](https://jitpack.io/#aritra-tech/ComposeScratchEffect)
 
